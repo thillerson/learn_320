@@ -14,9 +14,9 @@
   NSManagedObjectContext *managedObjectContext;	    
   NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	
-	NSMutableData *currentData;
-
-    UIWindow *window;
+	UINavigationController *navigationController;
+	
+	UIWindow *window;
 }
 
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

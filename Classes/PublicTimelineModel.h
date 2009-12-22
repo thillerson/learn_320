@@ -1,5 +1,5 @@
 //
-//  TwitterAPI.h
+//  PublicTimelineModel.h
 //  learn_320
 //
 //  Created by Tony Hillerson on 12/22/09.
@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <Three20/Three20.h>
 
-@interface TwitterAPI : NSObject {
-
+@interface PublicTimelineModel : TTURLRequestModel {
+	TTURLRequest *publicTimelineRequest;
+	NSArray *tweets;
 }
 
-+ (void) loadPublicTimelineWithDelegate:(id)delegate;
+@property(nonatomic,retain) NSArray *tweets;
 
 @end

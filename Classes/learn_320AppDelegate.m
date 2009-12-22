@@ -3,11 +3,12 @@
 //  learn_320
 //
 //  Created by Tony Hillerson on 12/21/09.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//  Copyright EffectiveUI 2009. All rights reserved.
 //
 
 #import "learn_320AppDelegate.h"
-#import "TwitterAPI.h"
+#import "PublicTweetsTableViewController.h"
+#import "PublicTimelineModel.h"
 
 @implementation learn_320AppDelegate
 
@@ -18,8 +19,11 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	[TwitterAPI loadPublicTimelineWithDelegate:self];
+	PublicTweetsTableViewController *rootViewController = [[[PublicTweetsTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+	rootViewController.model = [[[PublicTimelineModel alloc] init] autorelease];
+	navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
 	
+	[window addSubview:navigationController.view];
 	[window makeKeyAndVisible];
 	return YES;
 }
@@ -128,10 +132,10 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-	[currentData release];
-    [managedObjectContext release];
-    [managedObjectModel release];
-    [persistentStoreCoordinator release];
+	[navigationController release];
+  [managedObjectContext release];
+  [managedObjectModel release];
+  [persistentStoreCoordinator release];
     
 	[window release];
 	[super dealloc];
