@@ -19,8 +19,7 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	PublicTweetsTableViewController *rootViewController = [[[PublicTweetsTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
-	rootViewController.model = [[[PublicTimelineModel alloc] init] autorelease];
+	PublicTweetsTableViewController *rootViewController = [[[PublicTweetsTableViewController alloc] init] autorelease];
 	navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
 	
 	[window addSubview:navigationController.view];

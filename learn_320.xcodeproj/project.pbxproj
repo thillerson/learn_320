@@ -17,6 +17,7 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		EAF6BB8510E17BF10082F2D7 /* PublicTweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6BB8410E17BF10082F2D7 /* PublicTweetsTableViewController.m */; };
 		EAF6BB8810E17CFA0082F2D7 /* PublicTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6BB8710E17CFA0082F2D7 /* PublicTimelineModel.m */; };
+		EAF6BC0510E18B7F0082F2D7 /* PublicTweetsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6BC0410E18B7F0082F2D7 /* PublicTweetsTableViewDataSource.m */; };
 		EAFEE8B610E0347C00989D80 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFEE8B310E0346D00989D80 /* libThree20.a */; };
 		EAFEE8BB10E034C500989D80 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAFEE8BA10E034C500989D80 /* Three20.bundle */; };
 		EAFEE8D910E0350F00989D80 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFEE8D810E0350F00989D80 /* QuartzCore.framework */; };
@@ -69,6 +70,8 @@
 		EAF6BB8410E17BF10082F2D7 /* PublicTweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTweetsTableViewController.m; sourceTree = "<group>"; };
 		EAF6BB8610E17CFA0082F2D7 /* PublicTimelineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicTimelineModel.h; sourceTree = "<group>"; };
 		EAF6BB8710E17CFA0082F2D7 /* PublicTimelineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTimelineModel.m; sourceTree = "<group>"; };
+		EAF6BC0310E18B7F0082F2D7 /* PublicTweetsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicTweetsTableViewDataSource.h; sourceTree = "<group>"; };
+		EAF6BC0410E18B7F0082F2D7 /* PublicTweetsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTweetsTableViewDataSource.m; sourceTree = "<group>"; };
 		EAFEE8AD10E0346D00989D80 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAFEE8BA10E034C500989D80 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
 		EAFEE8D810E0350F00989D80 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -108,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				EAF6BB3410E177D50082F2D7 /* View Controllers */,
-				EAF6BA2D10E160130082F2D7 /* Twitter API */,
+				EAF6BA2D10E160130082F2D7 /* Model */,
 				EAFEE8F610E0378000989D80 /* JSON */,
 				1D3623240D0F684500981E51 /* learn_320AppDelegate.h */,
 				1D3623250D0F684500981E51 /* learn_320AppDelegate.m */,
@@ -168,13 +171,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EAF6BA2D10E160130082F2D7 /* Twitter API */ = {
+		EAF6BA2D10E160130082F2D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				EAF6BB8610E17CFA0082F2D7 /* PublicTimelineModel.h */,
 				EAF6BB8710E17CFA0082F2D7 /* PublicTimelineModel.m */,
 			);
-			name = "Twitter API";
+			name = Model;
 			sourceTree = "<group>";
 		};
 		EAF6BB3410E177D50082F2D7 /* View Controllers */ = {
@@ -182,6 +185,8 @@
 			children = (
 				EAF6BB8310E17BF10082F2D7 /* PublicTweetsTableViewController.h */,
 				EAF6BB8410E17BF10082F2D7 /* PublicTweetsTableViewController.m */,
+				EAF6BC0310E18B7F0082F2D7 /* PublicTweetsTableViewDataSource.h */,
+				EAF6BC0410E18B7F0082F2D7 /* PublicTweetsTableViewDataSource.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				EAFEE90910E0378000989D80 /* SBJsonWriter.m in Sources */,
 				EAF6BB8510E17BF10082F2D7 /* PublicTweetsTableViewController.m in Sources */,
 				EAF6BB8810E17CFA0082F2D7 /* PublicTimelineModel.m in Sources */,
+				EAF6BC0510E18B7F0082F2D7 /* PublicTweetsTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

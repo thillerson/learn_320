@@ -7,15 +7,28 @@
 //
 
 #import "PublicTweetsTableViewController.h"
-
+#import "PublicTweetsTableViewDataSource.h"
+#import "PublicTimelineModel.h"
 
 @implementation PublicTweetsTableViewController
 
+- (id)init {
+  if (self = [super init]) {
+    self.title = @"Tweetz";
+		id<TTTableViewDataSource> ds = [PublicTweetsTableViewDataSource dataSourceWithItems:nil];
+		ds.model = [[PublicTimelineModel alloc] init];
+		self.dataSource = ds;
+	}
+	return self;
+}
+
+- (void) viewDidLoad {
+	[self reload];
+}
 
 - (void)dealloc {
     [super dealloc];
 }
-
 
 @end
 

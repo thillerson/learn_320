@@ -20,7 +20,7 @@
 
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more {
 	cachePolicy = TTURLRequestCachePolicyNoCache; // make this always load for now
-	publicTimelineRequest = [[TTURLRequest alloc] initWithURL:@"http://twitter.com/statuses/public_timeline.json" delegate:self];
+	publicTimelineRequest = [[TTURLRequest alloc] initWithURL:@"http://brightkite.com/objects.json" delegate:self];
 	[publicTimelineRequest setCachePolicy:cachePolicy];
 	publicTimelineRequest.response = [[[TTURLDataResponse alloc] init] autorelease];
 	[publicTimelineRequest send];
